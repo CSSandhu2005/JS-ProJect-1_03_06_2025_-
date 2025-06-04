@@ -1,8 +1,11 @@
 let primaryButton = document.querySelector("#primary--btn") ; 
 let popUpDialog = document.querySelector(".popup") ; 
+let removeButton = document.getElementById("RemoveDialog") ; 
 
 primaryButton.addEventListener("click", () => { 
-    popUpDialog.style.visibility = "visible" ;  
-    popUpDialog.style.top = "50%" ; 
-    popUpDialog.style.transform.scale = "1" ; 
+    popUpDialog.classList.add("open-popup") ; 
+ })
+
+ removeButton.addEventListener("click", () => { 
+    popUpDialog.classList.remove("open-popup") ; 
  })
